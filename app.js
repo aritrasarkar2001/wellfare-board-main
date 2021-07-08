@@ -1,13 +1,17 @@
-var createError = require("http-errors");
-var express = require("express");
-var path = require("path");
-var cookieParser = require("cookie-parser");
-var logger = require("morgan");
+/* eslint-disable quotes */
+/* eslint-disable no-undef */
+/* eslint-disable max-len */
+const createError = require("http-errors");
+const express = require("express");
+const path = require("path");
+const cookieParser = require("cookie-parser");
+const logger = require("morgan");
 const expressLayouts = require("express-ejs-layouts");
 require("dotenv").config();
-var indexRouter = require("./routes/index");
-
-var app = express();
+const Sentry = require("@sentry/node");
+const Tracing = require("@sentry/tracing");
+const indexRouter = require("./routes/index");
+const app = express();
 BASE_URL = process.env.BASE_URL || "project";
 
 /* ===================== ADMIN SETUP ====================== */
@@ -17,9 +21,8 @@ app.use(`/${BASE_URL}/admin`, router);
 const session = require("./middlewares/express-mongo-store");
 //====================== SENTRY SETUP ===========================================
 
-var Sentry = require("@sentry/node");
-var Tracing = require("@sentry/tracing");
-const SENTRY_URL = process.env.SENTRY_URL;
+
+const {SENTRY_URL}= process.env;
 Sentry.init({
   dsn: SENTRY_URL,
   integrations: [
