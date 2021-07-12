@@ -1,5 +1,5 @@
-const Achievement= require("../models/achievement");
-const Announcement=require("../models/announcement");
+const Achievement= require("../models/achievement_main");
+const Announcement=require("../models/announcement_main");
 const About=require("../models/about");
 const Vision=require("../models/vision");
 
@@ -11,7 +11,7 @@ exports.homeView=async (req,res)=>{
         const AchieveData = await Achievement.find().sort({creation:-1});
         const AboutData= await About.findOne({});
         const VisionData= await Vision.findOne({});
-        return res.render("index",{announcements :AnnounceData,achievements: AchieveData, about:AboutData,vision:VisionData})
+        return res.render("home",{announcements :AnnounceData,achievements: AchieveData, about:AboutData,vision:VisionData})
     } catch (err) {
        
         console.log(err);
