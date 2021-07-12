@@ -76,8 +76,10 @@
 }
 
 .welcome {
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
   margin-left: 150px;
-  border: 3px solid blACK;
   margin-right: 520px;
   font-size: larger;
 }
@@ -90,11 +92,14 @@ p {
   display: inline;
 }
 
+/* side-nav */
 .middle {
   float: right;
-  margin: 150px;
   border-left: 3px solid rgb(133, 129, 129);
-  font-size: larger;
+  margin-top: 150px;
+  margin-right: 150px;
+  list-style-type: none;
+  font-size: 22px;
 }
 
 .aboutWelfare {
@@ -158,8 +163,8 @@ img {
 }
 
 /*
-    Achievements
-  */
+      Achievements
+    */
 
 .card {
   border: 0px !important;
@@ -186,7 +191,7 @@ img {
 /* Announcements */
 .announcements {
   margin-left: 150px;
-  margin-top: 120px;
+  margin-top: 40px;
   margin-right: 450px;
   display: flex;
   flex-direction: column;
@@ -195,7 +200,7 @@ img {
 .announce {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 27px;
+  margin-bottom: 30px;
 }
 
 .box {
@@ -217,10 +222,14 @@ img {
 }
 
 .date {
+  padding-left: 20px;
+
   font-size: smaller;
 }
 
 .content {
+  padding-left: 20px;
+
   font-weight: normal;
 }
 
@@ -233,25 +242,7 @@ p {
   font-size: large;
 }
 
-a:hover {
-  color: black;
-}
-
-.sideNav {
-  float: right;
-  margin-top: 140;
-  margin-right: 150;
-  list-style-type: none;
-  font-size: large;
-}
-
-.sideNav li a {
-  color: rgb(138, 133, 133);
-
-  text-decoration: none;
-}
-
-#welfareBoardHeading {
+.welfareBoardHeading {
   color: black;
 }
 
@@ -269,4 +260,40 @@ a:hover {
 
 #vision {
   color: black;
+}
+
+#contentHead {
+  font-size: larger;
+}
+
+/* Events */
+
+.events {
+  background-color: #1e2532;
+  margin-top: 60px;
+  padding: 70px 150px 80px;
+}
+
+.event {
+  display: flex;
+  padding-right: 450px;
+  padding-bottom: 70px;
+  justify-content: space-between;
+}
+
+.ehead {
+  color: #ffffff;
+  font-weight: bolder;
+  font-size: xx-large;
+}
+
+.ecards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.einfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
