@@ -265,3 +265,37 @@ p {
 #contentHead {
   font-size: larger;
 }
+
+/
+
+/* Events */
+
+.events {
+  background-color: #1e2532;
+  margin-top: 60px;
+  padding: 70px 150px 80px;
+}
+
+.event {
+  display: flex;
+  padding-right: 450px;
+  padding-bottom: 70px;
+  justify-content: space-between;
+}
+
+.ehead {
+  color: #ffffff;
+  font-weight: bolder;
+  font-size: xx-large;
+}
+
+.ecards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.einfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
